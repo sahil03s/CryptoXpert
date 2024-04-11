@@ -88,7 +88,7 @@ const Header = () => {
         <div className="logo">
           <Link to="/">
             <h1>
-              Crypto <span>App</span>
+              Crypto<span>Xpert</span>
             </h1>
           </Link>
         </div>
@@ -183,7 +183,7 @@ const Header = () => {
                 type="button"
                 className="white_btn btn"
                 onClick={() => {
-                  window.location = "/login";
+                  window.location = "https://cryptoxpert-1.onrender.com/login";
                 }}
               >
                 Login
@@ -193,7 +193,7 @@ const Header = () => {
                 type="button"
                 className="white_btn btn"
                 onClick={() => {
-                  window.location = "/signup";
+                  window.location = "https://cryptoxpert-1.onrender.com/signup";
                 }}
               >
                 Register
