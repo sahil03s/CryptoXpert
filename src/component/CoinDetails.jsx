@@ -13,6 +13,8 @@ import EqualizerIcon from '@mui/icons-material/Equalizer';
 import { VictoryChart, VictoryStack, VictoryArea, VictoryAxis } from 'victory';
 
 const CoinDetails = () => {
+
+
   const { id } = useParams();
 
   const [grp, setGrp] = useState(360);
@@ -24,6 +26,8 @@ const CoinDetails = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+
+
     fetch(`https://api.coingecko.com/api/v3/coins/${id}`, { method: "GET" })
       .then(async (res) => {
         console.log(id)
@@ -35,10 +39,7 @@ const CoinDetails = () => {
         setError("Failed to Fetch coin detail")
       })
   }, [])
-  // async function fun() {
-  //     const response = await fetch(`https://api.coingecko.com/api/v3/coins/${id}`, { method: "GET" });
-  // }
-  // fun();
+
 
 
   useEffect(() => {
@@ -169,9 +170,9 @@ const CoinDetails = () => {
                 <br />
               </div>
               {/* <hr /> */}
-              <div className='rightr' >
+              <div className='rightr'  >
                 <div style={{ border: "1px solid #002D62", borderRadius: "5px" }}>
-                  <table style={{ width: "100%", }}>
+                  <table style={{}}>
                     <thead>
                       <tr>
                         <th>1h</th>
@@ -219,14 +220,14 @@ const CoinDetails = () => {
                   </table>
                 </div>
                 <br />
-                <div className='flex-row' style={{ backgroundColor: "#E0FFFF", borderRadius: "5px", border: "1px solid #002D62", justifyContent: "space-between" }}>
+                <div className='flex-row butts' style={{ backgroundColor: "#E0FFFF", borderRadius: "5px", border: "1px solid #002D62", justifyContent: "space-between", flexWrap: "wrap" }}>
                   <div className='flex-row cent'>
                     <div className='butt1' onClick={() => setVal(1)}>Price</div>
                     <div className='butt1' onClick={() => setVal(2)}>marketCap  </div>
                     <div className='butt1' onClick={() => setVal(3)}>Volume</div>
                   </div>
                   <div></div>
-                  <div className='flex-row cent' >
+                  <div className='flex-row cent' style={{ flexWrap: "wrap" }} >
                     <div className='flex-cols cent' style={{ fontWeight: "bold" }}>Time : </div>
                     <div onClick={() => setGrp(1)} className='butt'>24h</div>
                     <div onClick={() => setGrp(7)} className='butt'>7d</div>

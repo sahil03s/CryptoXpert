@@ -29,6 +29,8 @@
     padding: 10px;
 }
 
+
+
 .bottomr {
     padding: 30px;
 }
@@ -134,4 +136,47 @@ th:last-child {
 
 td:last-child {
     border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 800px) and(min-width: 600px) {
+    .rightr {
+        width: 70vw;
+        transform: scale(0.85);
+        /* Scale down to 50% of original size */
+    }
+
+    table {
+        transform: scale(0.8);
+    }
+
+    .butts {
+        transform: scale(0.7);
+        margin-left: 0;
+    }
+
+    .butts div:first-child {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .rightr {
+        width: 70vw;
+        transform: scale(0.85);
+        /* Scale down to 50% of original size */
+    }
+
+    table {
+        /* transform: scale(0.6); */
+        transform: scale(0.7);
+    }
+
+    .butts {
+        transform: scale(0.7);
+        margin-left: 0;
+    }
+
+    .butts div:first-child {
+        justify-content: space-around;
+    }
 }
