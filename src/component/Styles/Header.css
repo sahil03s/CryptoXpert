@@ -1,0 +1,225 @@
+a {
+    text-decoration: none;
+}
+
+#header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0px 25px 0px;
+    background-color: #020715;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: 0.6;
+}
+
+.logo h1 {
+    margin-left: 30px;
+    color: white;
+    font-size: 32px;
+}
+
+.logo span {
+    color: gold;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70%;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    transition: 0.6s;
+}
+
+#navbar li a {
+    color: white;
+    font-size: 18px;
+    transition: 0.3s ease;
+    /* text-transform: uppercase; */
+}
+
+.account_icon {
+    color: white;
+    font-size: 25px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: gold
+}
+
+#navbar a.active::after,
+#navbar li a:hover::after {
+
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#navbar {
+    /* Styles for larger screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70%;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    transition: 0.6s;
+}
+
+#navbar li a {
+    color: white;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.account_icon {
+    color: white;
+    font-size: 25px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+#navbar a.active,
+#navbar li a:hover {
+    color: gold;
+}
+
+#navbar a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.hover-box {
+    position: fixed;
+    right:2%;
+    top: 18%;
+    background-color:#31363F;
+    color: white;
+    font-weight:600;
+    font-size: 0.9em;
+    padding: 2%;
+    height: auto;
+    border-radius: 10px;
+}
+.hover-box:hover{
+    transform: scale(1.01);
+    /* transition: 1s ease-in; */
+}
+.btn{
+    margin: 2%;
+    margin-top: 5px;
+    cursor: pointer;
+    text-align: center;
+    position:relative;
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+.btn-mail-icon{
+    position: absolute;
+    left:-10px;
+    top: 0px;
+    color: white;
+    font-size: 20px;
+}
+.btn-logout-icon{
+    position: absolute;
+    left:90%;
+    top: 62%;
+    color: white;
+    font-size: 20px;
+}
+.logout_btn{
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    background-color: white;
+    border-radius: 20px;
+    width: 180px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    #navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #020715;
+        width: 50%;
+        padding: 10px 0;
+        height: 90vh;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #navbar.show-menu {
+        display: flex;
+        color: aliceblue;
+    }
+
+    #navbar li {
+        padding: 10px;
+        color: aliceblue;
+        text-align: left;
+    }
+        .hover-box {
+            
+            right: 60%;
+            top: 18%;
+            font-weight: 600;
+            font-size: 12px;
+            padding: 2%;
+            border-radius: 10px;
+
+        }
+        .hover-box >div>button{
+            width: 50%;
+            padding: 1px;
+        }
+        .btn-logout-icon{
+            opacity: 0;
+        }
+        .btn-mail-icon{
+            opacity: 0;
+        }
+}
