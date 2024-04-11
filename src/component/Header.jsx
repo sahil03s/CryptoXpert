@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "../component/Styles/Header.css";
 import { Link, useLocation } from "react-router-dom";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
@@ -23,6 +24,16 @@ const Header = () => {
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const navigate = useNavigate();
+
+  const redirectToLoginPage = () => {
+    navigate("/login");
+  };
+
+  const redirectToSignUpPage = () => {
+    navigate("/signup");
   };
 
   useEffect(() => {
@@ -182,9 +193,7 @@ const Header = () => {
               <button
                 type="button"
                 className="white_btn btn"
-                onClick={() => {
-                  window.location = "https://cryptoxpert-1.onrender.com/login";
-                }}
+                onClick={redirectToLoginPage}
               >
                 Login
               </button>
@@ -192,9 +201,7 @@ const Header = () => {
               <button
                 type="button"
                 className="white_btn btn"
-                onClick={() => {
-                  window.location = "https://cryptoxpert-1.onrender.com/signup";
-                }}
+                onClick={redirectToSignUpPage}
               >
                 Register
               </button>
